@@ -14,6 +14,22 @@ roleRef:
 
 ---
 
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: user2-RoleBinding
+  namespace: production
+subjects:
+- kind: User
+  name: user2
+  apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: Role
+  name: user2-role
+  apiGroup: rbac.authorization.k8s.io 
+
+---
+
 
 kind: RoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
